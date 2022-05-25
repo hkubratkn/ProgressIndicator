@@ -1,0 +1,29 @@
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import com.example.exampleeee.ui.theme.ExampleeeeTheme
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ExampleeeeTheme {
+                Surface(color = MaterialTheme.colors.background){
+                    Column(
+                        modifier = Modifier.fillMaxSize(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ){
+                        LinearProgressIndicator()   
+                    }
+                }
+            }
+        }
+    }
+}
